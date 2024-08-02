@@ -37,3 +37,6 @@ func Demo1() {
 	fmt.Println(durum2) // durum2 değişkeniyle hem false sonucunu verecek durum değişkeninin tersini yazmış olduk hem de bunu yazdırırken ünlem işaretiyle yaptık.
 
 }
+
+/* := yeni bir değişken bildirimi ve ataması için kullanılır.
+= mevcut bir değişkene yeni bir değer atamak için kullanılır. */
