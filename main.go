@@ -7,8 +7,10 @@ import (
 	"golesson/functions"
 	"golesson/loops"
 	"golesson/maps"
+	"golesson/pointers"
 	myrange "golesson/range"
 	"golesson/slices"
+	"golesson/structs"
 	"golesson/variables" // main paketinde golesson modülü altında variables paketini çağrıyoruz.
 	"golesson/workshop"
 )
@@ -51,4 +53,20 @@ func main() {
 	maps.Demo1()
 	myrange.Demo1()
 	myrange.Demo2()
+
+	sayi := 20
+	pointers.Demo1(sayi)
+	fmt.Println("Maindeki sayı: ", sayi) // Burada sayıyı normal bir şekilde yazdıracaktır. Toplanmış hali demoda bulunduğu için orada artar.
+
+	pointers.Demo2(&sayi)
+	fmt.Println("Maindeki sayı: ", sayi) // Burada sayının artırılmış halini yazdırır. Main kısmında da yeni değer 21 olmuştur.
+
+	sayilar = []int{1, 2, 3}
+	pointers.Demo3(sayilar)
+	fmt.Println("Maindeki sayı: ", sayilar[0]) /* Arrayler yani diziler diğer değişkenler gibi değerler üzerinden çalışmazlar.
+	Referans dediğimiz bellekteki adreslerle çalışır. Bu nedenle maindeki değerlerde de değişim olacaktır.
+	Biz array e verileri adresiyle gönderiyoruz. Slicelarda da aynı durum vardır. */
+
+	structs.Demo1()
+	structs.Demo2()
 }
