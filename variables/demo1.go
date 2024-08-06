@@ -2,6 +2,8 @@ package variables
 
 import "fmt" // Kullanılmayan kütüphaneler hata verir.
 
+// Format paketi fmt sembolü ile gösterilir. Standart bir kütüphanedir. Kullanıcılar bu işlevi yazdırma, okuma, dosyaya yazma, dosyadan okuma ve diğer girdi/çıktı işlemleri için kullanır.
+
 func Demo1() {
 	fmt.Print("Merhaba")   // Print gibi komutlar büyük harfle başlamalıdır. Go dili büyük küçük harf duyarlıdır.
 	fmt.Println(" Dünya!") // Print yazdırır, Println alt satıra yazdırır.
