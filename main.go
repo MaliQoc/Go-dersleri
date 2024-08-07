@@ -3,10 +3,13 @@ package main
 import (
 	"fmt"
 	"golesson/arrays"
-	"golesson/channels"
+
+	// "golesson/channels"
 	"golesson/conditionals"
 	"golesson/functions"
-	"golesson/goroutines"
+
+	// "golesson/goroutines"
+	"golesson/interfaces"
 	"golesson/loops"
 	"golesson/maps"
 	"golesson/pointers"
@@ -15,7 +18,7 @@ import (
 	"golesson/structs"
 	"golesson/variables" // main paketinde golesson modülü altında variables paketini çağrıyoruz.
 	"golesson/workshop"
-	"time"
+	// "time"
 )
 
 func main() {
@@ -25,9 +28,10 @@ func main() {
 	workshop.Demos()
 	loops.Demo1()
 	loops.Demo2()
-	loops.SayiTahmin()
-	loops.AsalSayi()
+	// loops.SayiTahmin()
+	// loops.AsalSayi()
 	loops.ArkadasSayi()
+	loops.SwitchDemo1()
 	arrays.Demo1()
 	arrays.Demo2()
 	arrays.Demo3()
@@ -73,32 +77,39 @@ func main() {
 	structs.Demo1()
 	structs.Demo2()
 
-	goroutines.CiftSayilar()
-	goroutines.TekSayilar()
+	/*
+		goroutines.CiftSayilar()
+		goroutines.TekSayilar()
 
-	// Eşzamanlı bir işlem oluşturmak için go anahtar kelimesinden faydalanabiliriz. Bunun için eşzamanlı çalışacak işlemin başına go yazmamız yeterli olacaktır.
+		// Eşzamanlı bir işlem oluşturmak için go anahtar kelimesinden faydalanabiliriz. Bunun için eşzamanlı çalışacak işlemin başına go yazmamız yeterli olacaktır.
 
-	go goroutines.CiftSayilar()
-	go goroutines.TekSayilar()
-	time.Sleep(3 * time.Second)
-	fmt.Println("Main bitti.") /* time.Sleep() kullanarak 3 saniye bekletiyoruz.
-	Eğer time.Sleep() eklememiş olsaydık ekranda önceki fonksiyonlar çağrılacak, sıra bu fonksiyona geldiğinde ise program bunu atlayacaktı.
-	Bunun sebebi Go Runtime'ının sadece ana iş parçacığını beklemesidir. Ana iş parçacığındaki işlemler sonlandıktan sonra, diğer işlemleri beklemiyor.
-	Yukarıdaki örnekte bunu engellemek için time.Sleep() kullandık. Böylece program 5 saniye beklerken eşzamanlı işlemimiz de tamamlandı. */
+		go goroutines.CiftSayilar()
+		go goroutines.TekSayilar()
+		time.Sleep(3 * time.Second)
+		fmt.Println("Main bitti.")
 
-	ciftSayiCn := make(chan int) // Bu satırda make() fonksiyonu ile ciftSayiCn isminde bir kanal oluşturduk. Bu kanalın özelliği int tipinde değer taşımasıdır.
-	tekSayiCn := make(chan int)  // Bu satırda da aynı işlemi yaptık. Kanalımızın ismi tekSayiCn.
-	go channels.CiftSayilar(ciftSayiCn)
-	go channels.TekSayilar(tekSayiCn)
+		/* time.Sleep() kullanarak 3 saniye bekletiyoruz.
+		Eğer time.Sleep() eklememiş olsaydık ekranda önceki fonksiyonlar çağrılacak, sıra bu fonksiyona geldiğinde ise program bunu atlayacaktı.
+		Bunun sebebi Go Runtime'ının sadece ana iş parçacığını beklemesidir. Ana iş parçacığındaki işlemler sonlandıktan sonra, diğer işlemleri beklemiyor.
+		Yukarıdaki örnekte bunu engellemek için time.Sleep() kullandık. Böylece program 5 saniye beklerken eşzamanlı işlemimiz de tamamlandı. */
 
-	ciftSayiToplam, tekSayiToplam := <-ciftSayiCn, <-tekSayiCn /* Bir de bu kanalın çıkış noktası olması gerekir.
-	Bu çıkış noktasında, ister kanaldan gelen veriyi bir değişkene atayabiliriz, istersek de sadece kanala veri gelmesini bekleyebiliriz. */
+	/*
+		ciftSayiCn := make(chan int) // Bu satırda make() fonksiyonu ile ciftSayiCn isminde bir kanal oluşturduk. Bu kanalın özelliği int tipinde değer taşımasıdır.
+		tekSayiCn := make(chan int)  // Bu satırda da aynı işlemi yaptık. Kanalımızın ismi tekSayiCn.
+		go channels.CiftSayilar(ciftSayiCn)
+		go channels.TekSayilar(tekSayiCn)
+
+		ciftSayiToplam, tekSayiToplam := <-ciftSayiCn, <-tekSayiCn /* Bir de bu kanalın çıkış noktası olması gerekir.
+		Bu çıkış noktasında, ister kanaldan gelen veriyi bir değişkene atayabiliriz, istersek de sadece kanala veri gelmesini bekleyebiliriz. */
 
 	/* Örnekte ciftSayiToplam isimli değişkene ciftSayiCn kanalından gelen int tipinde değer atadık.
 	Bir de tekSayiToplam isimli değişkene tekSayiCn kanalından gelen int tipinde değer atadık.
 	Bu iki değişkene atama işlemi iki kanala değer gönderildiği zaman yapılacaktır.
 	Yani ciftSayiCn ve tekSayiCn kanallarına değer gelene kadar iş parçacığı duraklatılacaktır. */
 
-	carpim := ciftSayiToplam * tekSayiToplam
-	fmt.Println("Çarpım: ", carpim)
+	/* carpim := ciftSayiToplam * tekSayiToplam
+	fmt.Println("Çarpım: ", carpim) */
+
+	interfaces.Demo1()
+	interfaces.Demo2()
 }
