@@ -24,4 +24,5 @@ func AsalSayi() {
 	}
 
 }
+
 // Girdiğimiz sayının asallığını bu şekilde ölçebiliriz.
