@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"golesson/arrays"
+	"golesson/defer_statement"
+	errorhandling "golesson/error_handling"
 
 	// "golesson/channels"
 	"golesson/conditionals"
@@ -112,4 +114,11 @@ func main() {
 
 	interfaces.Demo1()
 	interfaces.Demo2()
+	defer_statement.B()
+	defer_statement.Test()
+	defer_statement.Demo3()
+	errorhandling.Demo1()
+	interfaces.Demo3()
+	errorhandling.Demo2()
+	fmt.Println(errorhandling.TahminEt2(102))
 }
