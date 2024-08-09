@@ -15,6 +15,7 @@ Go, makine kodunu derleyerek onu çok hızlı ve güvenilir hale getirir. İşle
 DevOps giderek daha fazla Go kullanmaya başladı. Google devops taki Java ve C++ ın derlenmesinin uzun sürmesinden şikayetçi olduğu için Go ya ihiyaç duydu.
 
 Go yu tasarlayan ekip programlama dili ve işletim sistemi yazmak konusunda Dünya’da en uzman ekip hatta şöyle söyleyebilirim Ken Thompson , Dennis Ritchie ile C dilini yazan ekipten ve UTF-8 i yazan kişidir. Rob Pike ise Ken Thompson ile beraber Plan9, Inferno, Unix işletim sistemini yazan kişi aynı zamanda Limbo programlama dilini yaptı. Aynı zamanda Robert Griesemer da bu ekipteler.
+
 "Dinamik olarak yazılan bir dilin programlama kolaylığı + statik olarak yazılmış ve derlenmiş bir dilin etkinliği ve güvenliği" denklemi vardır :)
 
 2) C nin kullanıldığı bazı alanlar
