@@ -5,8 +5,9 @@ import (
 	"golesson/arrays"
 	"golesson/defer_statement"
 	errorhandling "golesson/error_handling"
-	stringfunctions "golesson/string_functions"
 
+	// "golesson/restful"
+	stringfunctions "golesson/string_functions"
 	// "golesson/channels"
 	"golesson/conditionals"
 	"golesson/functions"
@@ -125,4 +126,6 @@ func main() {
 	fmt.Println(errorhandling.TahminEt2(102))
 	stringfunctions.Demo1()
 	stringfunctions.Demo2()
+	// restful.Demo1()
+	// restful.Demo2()
 }
