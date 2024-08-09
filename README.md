@@ -4,7 +4,7 @@ Staja başladığım 2024 yılında Go dilini öğrenirken yazdığım kodları 
 
 ÖNEMLİ! Bu konuların temel Go eğitiminden geldiğini unutmayın.
 
-1) Neden C öğrenmelisiniz?
+1) Neden Go öğrenmelisiniz?
 
 Açık kaynak kodlu bir yazılımdır. Kodlarda geriye dönük bakım yapmak oldukça kolay bu uzun ömürlü projeler için bu çok önemlidir, versiyonlarda ciddi bir major değişiklik gerekmez. Minimalist tasarım ve net dil özellikleri ile temiz bir söz dizimine sahiptir. Böylece bu dili hızla öğrenebilirsiniz.
 
@@ -18,7 +18,7 @@ Go yu tasarlayan ekip programlama dili ve işletim sistemi yazmak konusunda Dün
 
 "Dinamik olarak yazılan bir dilin programlama kolaylığı + statik olarak yazılmış ve derlenmiş bir dilin etkinliği ve güvenliği" denklemi vardır :)
 
-2) C nin kullanıldığı bazı alanlar
+2) Go nun kullanıldığı bazı alanlar
 
 - Veri analizi ve veri işleme
 - Yapay zeka
