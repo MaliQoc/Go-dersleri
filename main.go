@@ -5,6 +5,7 @@ import (
 	"golesson/arrays"
 	"golesson/defer_statement"
 	errorhandling "golesson/error_handling"
+	stringfunctions "golesson/string_functions"
 
 	// "golesson/channels"
 	"golesson/conditionals"
@@ -24,6 +25,7 @@ import (
 )
 
 func main() {
+
 	variables.Demo1() // paket.fonksiyon şeklinde çalıştırılır.
 	conditionals.Demo1()
 	conditionals.Demo2()
@@ -121,4 +123,6 @@ func main() {
 	interfaces.Demo3()
 	errorhandling.Demo2()
 	fmt.Println(errorhandling.TahminEt2(102))
+	stringfunctions.Demo1()
+	stringfunctions.Demo2()
 }
